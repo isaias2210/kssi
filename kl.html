@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kassidy, ¿quieres ser mi San Valentín?</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #ffccdc;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        h1 {
+            color: #ff4081;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .yes {
+            background-color: #ff4081;
+            color: white;
+        }
+        .no {
+            background-color: #ccc;
+        }
+        .hidden {
+            display: none;
+        }
+        .gif-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Kassidy, ¿quieres ser mi San Valentín? ❤️</h1>
+        <div class="gif-container">
+            <img src="f6a5f7ddff1f05cbcc560256b9f98c2e.gif" alt="Gatitos" width="300">
+        </div>
+        <div class="buttons">
+            <button class="yes" onclick="showLove()">Sí</button>
+            <button class="no" id="noBtn" onmouseover="moveNo()">No</button>
+        </div>
+        <div id="loveMessage" class="hidden">
+            <h2>¡Sabía que dirías que sí! 💖</h2>
+            <p>Feliz San Valentín, Amor! Gracias por estar conmigo, eres la mejor novia del mundo,Te amo mucho mucho muchisimo. 💕</p>
+            <img src="goma-goma-cat.gif" alt="Amor" width="300">
+        </div>
+    </div>
+    
+    <script>
+        function showLove() {
+            document.getElementById("loveMessage").classList.remove("hidden");
+        }
+        
+        function moveNo() {
+            let noBtn = document.getElementById("noBtn");
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 50);
+            noBtn.style.position = "absolute";
+            noBtn.style.left = x + "px";
+            noBtn.style.top = y + "px";
+        }
+    </script>
+</body>
+</html>
